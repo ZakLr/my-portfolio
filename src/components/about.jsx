@@ -37,19 +37,19 @@ const AboutMe = () => {
               className="col-span-12 lg:col-span-7 lg:pl-6 xl:pl-12">
               <div className="">
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> I'm a second-year
+                  <span className="bullet"></span> I'm a second-year
                   student at <span className="text-highlight">ESI</span> (High
                   National School of Computer Science) based in Tlemcen/Algeria.
                 </p>
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> Proficient in{" "}
+                  <span className="bullet"></span> Proficient in{" "}
                   <span className="text-highlight">HTML, CSS</span>, and{" "}
                   <span className="text-highlight">JavaScript</span>, adept in{" "}
                   <span className="text-highlight">MERN stack</span> (MongoDB,
                   Express, React, Node.js).
                 </p>
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> Advanced in{" "}
+                  <span className="bullet"></span> Advanced in{" "}
                   <span className="text-highlight">
                     Python, machine learning
                   </span>{" "}
@@ -61,11 +61,11 @@ const AboutMe = () => {
                   , and <span className="text-highlight">Keras</span>.
                 </p>
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> Excels in crafting
+                  <span className="bullet"></span> Excels in crafting
                   user-centric websites, implementing machine learning models.
                 </p>
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> Committed to{" "}
+                  <span className="bullet"></span> Committed to{" "}
                   <span className="text-highlight">
                     continual learning, staying updated
                   </span>{" "}
@@ -74,7 +74,7 @@ const AboutMe = () => {
                   enhance project outcomes.
                 </p>
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet">&#8226;</span> Contributed in many
+                  <span className="bullet"></span> Contributed in many
                   university clubs as a technical team member like{" "}
                   <span className="text-highlight">GDG SBA, GDSC ESI SBA</span>
                   ...

@@ -14,7 +14,7 @@ import {
   FaLinux,
 } from "react-icons/fa";
 import {
-  SiNextDotJs,
+  SiNextdotjs,
   SiTailwindcss,
   SiExpress,
   SiNestjs,
@@ -42,7 +42,7 @@ const iconMap = {
   FaJava,
   FaDocker,
   FaLinux,
-  SiNextDotJs,
+  SiNextdotjs,
   SiTailwindcss,
   SiExpress,
   SiNestjs,
@@ -63,7 +63,7 @@ const skillsData = [
   { name: "CSS", iconName: "FaCss3Alt", category: "frontend" },
   { name: "JavaScript", iconName: "FaJsSquare", category: "frontend" },
   { name: "React.js", iconName: "FaReact", category: "frontend" },
-  { name: "Next.js", iconName: "SiNextDotJs", category: "frontend" },
+  { name: "Next.js", iconName: "SiNextdotjs", category: "frontend" },
   { name: "Tailwind CSS", iconName: "SiTailwindcss", category: "frontend" },
   { name: "Framer Motion", iconName: "AiOutlineAntDesign", category: "frontend" }, // Placeholder
   { name: "Node.js", iconName: "FaNodeJs", category: "backend" },

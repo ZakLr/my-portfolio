@@ -75,7 +75,7 @@ const Navigation1 = () => {
             {/* Mobile navigation toggle */}
             <div className="lg:hidden flex items-center">
               <button onClick={() => setToggleMenu(!toggleMenu)} className="text-highlight text-lg">
-                ///
+                HERE
               </button>
             </div>
           </div>
