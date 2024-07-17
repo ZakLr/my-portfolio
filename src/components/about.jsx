@@ -1,7 +1,7 @@
 import React, { useRef, useEffect,useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import profilePic from "../../assets/my_pic.jpg";
+import profilePic from "../assets/my_pic.jpg";
 import DotsEffect from "./DotsEffect";
 
 const AboutMe = () => {

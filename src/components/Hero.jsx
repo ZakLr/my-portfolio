@@ -3,7 +3,7 @@ import { faTwitter, faDribbble, faBehance } from "@fortawesome/free-brands-svg-i
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import Typed from "typed.js";
-import myPic from "../../assets/my_pic.jpg";
+import myPic from "../assets/my_pic.jpg";
 import Image from "next/image";
 import DotsEffect from "./DotsEffect";
 import { motion } from "framer-motion";
