@@ -39,12 +39,12 @@ const HeroHeader8 = () => {
               Hey there
             </h2>
             <h2 className="sm:text-3xl leading-none md:text-7xl font-bold mb-6 text-3xl">
-              I'm Zakaria Lourghi
+              I&apos;m Zakaria Lourghi
             </h2>
             <p
               className="text-xl md:text-2xl lg:text-3xl leading-normal mb-2  typed-text-container min-h-3 text-highlight"
               ref={typedRef}
-            >&apos;</p>
+            ></p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 100 }}

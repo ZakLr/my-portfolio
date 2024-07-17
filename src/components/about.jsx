@@ -37,7 +37,7 @@ const AboutMe = () => {
               className="col-span-12 lg:col-span-7 lg:pl-6 xl:pl-12">
               <div className="">
                 <p className="my-paragraph text-xl lg:text-2xl text-text-primary">
-                  <span className="bullet"></span> I'm a second-year
+                  <span className="bullet"></span> I&apos;m a second-year
                   student at <span className="text-highlight">ESI</span> (High
                   National School of Computer Science) based in Tlemcen/Algeria.
                 </p>
