@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { motion, useScroll, useSpring,useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import Link from "next/link";
+import SmoothScroll from "./SmoothScroll";
 const routes = [
   { name: "Home", href: "#", isActive: true },
   { name: "Services", href: "#", isActive: false },
@@ -48,34 +50,51 @@ const Navigation1 = () => {
     ["rgb(86, 1, 245)", "rgb(1, 245, 13)"]
   );
   return (
-    <motion.nav className="sticky top-0 z-50 bg-background-primary  backdrop-blur-md backdrop-opacity-75 bg-opacity-75">
+    <motion.nav className="sticky top-0 z-50 bg-background-primary  backdrop-blur-md backdrop-opacity-75 bg-opacity-75 shadow-sm shadow-highlight">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center w-5/6 mx-auto py-4">
           {/* Primary menu and logo */}
           <div className="flex items-center gap-16">
             {/* logo */}
             <div>
-              <p
-                className="text-3xl font-serif font-bold text-highlight "
-              >
+              <p className="text-xl sm:text-3xl font-serif font-bold text-highlight ">
                 My Portfolio
               </p>
             </div>
             {/* primary */}
             <div className="hidden lg:flex gap-8 text-text-primary text-xl">
-              <a href="#">Home</a>
-              <a href="#">Benefits</a>
-              <a href="#">Our Classes</a>
-              <a href="#">Contact Us</a>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
+              >
+                <SmoothScroll to="about">About</SmoothScroll>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
+              >
+                <SmoothScroll to="skills">Skills</SmoothScroll>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
+              >
+                <SmoothScroll to="projects">Projects</SmoothScroll>
+              </motion.div>
             </div>
           </div>
           {/* secondary */}
           <div className="flex items-center gap-6">
-            
             {/* Mobile navigation toggle */}
             <div className="lg:hidden flex items-center">
-              <button onClick={() => setToggleMenu(!toggleMenu)} className="text-highlight text-lg">
-                HERE
+              <button
+                onClick={() => setToggleMenu(!toggleMenu)}
+                className="text-highlight text-lg"
+              >
+                &#9776;
               </button>
             </div>
           </div>
@@ -89,19 +108,25 @@ const Navigation1 = () => {
       >
         <div className="px-12 py-16">
           <div className="flex flex-col gap-8 font-bold tracking-wider">
-            <a href="#" className="border-l-4 border-gray-600 pl-4">Features</a>
-            <a href="#" className="pl-4">Pricing</a>
-            <a href="#" className="pl-4">Download</a>
-            <a href="#" className="pl-4">Classic</a>
+            <Link Link href="#about" className="pl-4">
+              About
+            </Link>
+            <Link Link href="#skills" className="pl-4">
+              Skills
+            </Link>
+            <Link Link href="#projects" className="pl-4">
+              Projects
+            </Link>
           </div>
         </div>
       </div>
-      <motion.div style={{
+      <motion.div
+        style={{
           // scaleX: scrollYProgress,
           scaleX,
           transformOrigin: "left",
           // background: "blue",
-          
+
           position: "sticky",
           top: 0,
           width: "100%",

@@ -29,7 +29,7 @@ export default function DotsEffect({
       {Array.from({ length: columns }).map((_, colIndex) => (
         <div key={colIndex} className='flex flex-col gap-2 sm:gap-3'>
           {Array.from({ length: rows }).map((_, rowIndex) => (
-            <div key={rowIndex} className='h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 bg-highlight rounded-full'></div>
+            <div key={rowIndex} className='h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8 bg-text-secondary rounded-full'></div>
           ))}
         </div>
       ))}

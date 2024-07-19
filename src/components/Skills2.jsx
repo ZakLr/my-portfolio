@@ -1,5 +1,5 @@
 
-
+import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 import {
   FaHtml5,
@@ -12,6 +12,7 @@ import {
   FaJava,
   FaDocker,
   FaLinux,
+  
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -26,6 +27,11 @@ import {
   SiPandas,
   SiTensorflow,
   SiPytorch,
+  SiRedux,
+  SiCplusplus,
+  SiKeras,
+  SiFramer,
+  SiScikitlearn
 } from "react-icons/si";
 import { AiOutlineAntDesign } from "react-icons/ai"; // Placeholder for technologies without a direct match
 import DotsEffect from "./DotsEffect";
@@ -54,6 +60,11 @@ const iconMap = {
   SiPandas,
   SiTensorflow,
   SiPytorch,
+  SiRedux,
+  SiFramer,
+  SiKeras,
+  SiScikitlearn,
+  SiCplusplus,
   AiOutlineAntDesign, // Placeholder
 };
 
@@ -65,10 +76,10 @@ const skillsData = [
   { name: "React.js", iconName: "FaReact", category: "frontend" },
   { name: "Next.js", iconName: "SiNextdotjs", category: "frontend" },
   { name: "Tailwind CSS", iconName: "SiTailwindcss", category: "frontend" },
-  { name: "Framer Motion", iconName: "AiOutlineAntDesign", category: "frontend" }, // Placeholder
+  { name: "Framer Motion", iconName: "SiFramer", category: "frontend" }, // Placeholder
+  { name: "Redux", iconName: "SiRedux", category: "frontend" }, // Placeholder
   { name: "Node.js", iconName: "FaNodeJs", category: "backend" },
   { name: "Express.js", iconName: "SiExpress", category: "backend" },
-  { name: "Nest.js", iconName: "SiNestjs", category: "backend" },
   { name: "PostgreSQL", iconName: "SiPostgresql", category: "backend" },
   { name: "MongoDB", iconName: "SiMongodb", category: "backend" },
   { name: "Firebase", iconName: "SiFirebase", category: "backend" },
@@ -76,13 +87,14 @@ const skillsData = [
   { name: "Python", iconName: "FaPython", category: "machineLearning" },
   { name: "NumPy", iconName: "SiNumpy", category: "machineLearning" },
   { name: "Pandas", iconName: "SiPandas", category: "machineLearning" },
-  { name: "Scikit-learn", iconName: "AiOutlineAntDesign", category: "machineLearning" }, // Placeholder
+  { name: "Scikit-learn", iconName: "SiScikitlearn", category: "machineLearning" }, // Placeholder
   { name: "TensorFlow", iconName: "SiTensorflow", category: "machineLearning" },
-  { name: "Keras", iconName: "AiOutlineAntDesign", category: "machineLearning" }, // Placeholder
-  { name: "PyTorch", iconName: "SiPytorch", category: "machineLearning" },
+  { name: "Keras", iconName: "SiKeras", category: "machineLearning" }, // Placeholder
+  { name: "NLP", iconName: "AiOutlineAntDesign", category: "machineLearning" },
   { name: "Git", iconName: "FaGitAlt", category: "other" },
   { name: "CI/CD", iconName: "AiOutlineAntDesign", category: "other" }, // Placeholder
   { name: "Java", iconName: "FaJava", category: "other" },
+  { name: "C/C++", iconName: "SiCplusplus", category: "other" },
   { name: "Docker", iconName: "FaDocker", category: "other" },
   { name: "Linux", iconName: "FaLinux", category: "other" },
 ];
@@ -101,7 +113,11 @@ const Skills2 = () => {
   const ref = useRef(null);
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      viewport={{ visible: 0.5 }}
+      transition={{ duration: 2 }}
       id="skills"
       className="flex h-max min-h-[100vh] w-full items-center justify-center bg-background-primary text-text-primary relative "
     >
@@ -109,10 +125,9 @@ const Skills2 = () => {
         <h2  className="mt-4 inline pb-8 text-4xl font-bold text-text-primary lg:text-6xl">
           Skills
         </h2>
-        <div className="mb-4 flex justify-center px-5" ref={ ref}>
+        <div className="mb-4 flex justify-center flex-wrap px-5" ref={ ref}>
           <button
-
-            className={`mr-4 rounded-md text-md lg:text-xl px-4 py-2 text-text-primary hover:bg-highlight focus:ring-2 focus:ring-background-primary focus:ring-offset-2 ${
+            className={`mr-4 rounded-md text-md lg:text-2xl px-4 py-2 text-text-primary hover:bg-highlight focus:ring-2 focus:ring-background-primary focus:ring-offset-2 ${
               selectedCategory === "frontend" ? "bg-highlight" : ""
             }`}
             onClick={() => {
@@ -179,7 +194,7 @@ const Skills2 = () => {
       </div>
       <DotsEffect bottom={2} right={0} opacity={0.4} rows={4} columns={4}/>
       <DotsEffect top={-1} left={0} opacity={0.4} rows={4} columns={4}/>
-    </section>
+    </motion.section>
   );
 };
 
